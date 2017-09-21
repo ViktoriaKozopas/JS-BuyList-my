@@ -1,21 +1,196 @@
-.bl-background {
-    background: #cdcbcb;
-    padding: 20px;
+.bl-main_background {
+    width: auto;
+    height: 239px;
+    padding: 100px 50px 50px;
+    margin-left: 44px;
+    margin-right: 44px;
 }
 
-.bl-list {
-    background: white;
-    margin-bottom: 10px;
+.bl-container{
+    width: auto;
+    height: 253px;
+    margin: -14px;
+    /*max-width: 1200px;*/
 }
 
-.bl-bought {
-    background: white;
+.left-container {
+    /*background: #513eff;*/
+    width: 68%;
+    padding: 14px;
+    display: inline-block;
+    float: left;
+}
+
+.right-container {
+    /*background: #ffc448;*/
+    width: 27%;
+    padding: 14px;
+    display: inline-block;
+    float: right;
+}
+
+.bl-row{
+    width: auto;
+    background-color: white;
+    border-top: 1px solid darkgrey;
+
+    height: 40px;
+    padding: 10px;
+}
+.new-product{
+    width: auto;
+    background-color: white;
+    border-top: 1px solid darkgrey;
+
+    height: 40px;
+    padding: 15px 5px;
+}
+
+input[type="text"] {
+    height: 32px;
+    width: 83%;
+    margin-left: 5px;
+    padding: 3px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.button-add{
+    height: 41px;
+    width: 14%;
+    margin-right: 5px;
+    background-color: #2185D0;
+    border: 0 solid transparent;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    float: right;
+}
+
+.bl-product{
+    display: inline-block;
+    width: 25%;
+    margin: auto;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+}
+.bl-count{
+    display: inline-block;
+    width: 36%;
+    float: none;
+    text-align: center;
+    padding-top: 10px;
 }
 
 /*Кнопки*/
+.bl-minus {
+    display: inline-block;
+    background: #ff6357;
+    opacity: 0.7;
+    color: white;
+    border: 0 solid transparent;
+    border-radius: 10em;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 1px;
+}
 .bl-label {
-    background: #cdcbcb;
+    display: inline-block;
+    background:#E8E8E8;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    padding: 3px 8px;
+    margin: 1px;
 }
 .bl-plus {
-    background: #04a613;
+    display: inline-block;
+    background: #34d035;
+    opacity: 0.7;
+    color: white;
+    border: 0 solid transparent;
+    border-radius: 10em;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 1px;
+}
+
+.bl-buttons{
+    display: inline-block;
+    width: 37%;
+    float: right;
+    text-align: right;
+
+}
+
+.bl-bought{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bl-del{
+    background-color: #ff6357;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    padding: 9px 14px;
+
+}
+
+.bl-title{
+    background-color: white;
+    border-bottom: solid 1px darkgrey;
+
+    width: auto;
+    /*height: 30px;*/
+    padding: 3px;
+    margin: auto;
+
+    text-align: left;
+}
+
+.bl-right-prod-list{
+    background-color: white;
+    border-bottom: solid 1px darkgrey;
+
+    /*width: auto;*/
+    /*height: 30px;*/
+    padding: 15px 5px;
+    /*margin: auto;*/
+
+    text-align: left;
+}
+
+.left-label{
+    background-color: #DADADA;
+    display: inline-block;
+
+    border: 0 solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px 7px;
+}
+.titleProduct{
+    background-color: #DADADA;
+    display: inline-block;
+}
+
+.ui-circular-number{
+    display: inline-block;
+    background-color: #ff9945;
+    color: white;
+    border: 0 solid transparent;
+    border-radius: 2em;
+    text-align: center;
+    font-size: .64285714rem;;
+    padding: 4px 7px;
+}
+
+
+body{
+    background-color: #DADADA;
 }

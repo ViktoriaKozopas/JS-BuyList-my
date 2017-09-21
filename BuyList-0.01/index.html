@@ -5,27 +5,72 @@
     <title>My Page</title>
 
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-<div class="bl-background">
-    <div class="bl-list">
-        <div class="bl-row">
-            <div class="bl-product">
-                Помідори
+<div class="bl-main_background">
+    <div class="bl-container">
+        <div class="left-container">
+            <div class="new-product">
+                <input type="text" value="Назва товару">
+                <button class="button-add">Додати</button>
             </div>
-            <div class="bl-count">
-                <span class="bl-label">3</span>
-                <button class="bl-plus">+</button>
+            <div class="bl-row">
+                <div class="bl-product">Помідори</div>
+                <div class="bl-count">
+                    <button class="bl-minus">-</button>
+                    <span class="bl-label">1</span>
+                    <button class="bl-plus">+</button>
+                </div>
+                <div class="bl-buttons">
+                    <button class="bl-bought">Куплено</button>
+                    <button class="bl-del">x</button>
+                </div>
             </div>
-            <div class="bl-buttons">
-                [Куплене] [x]
+            <div class="bl-row">
+                <div class="bl-product">Печиво</div>
+                <div class="bl-count">
+                    <button class="bl-minus">-</button>
+                    <span class="bl-label">1</span>
+                    <button class="bl-plus">+</button>
+                </div>
+                <div class="bl-buttons">
+                    <button class="bl-bought">Куплено</button>
+                    <button class="bl-del">x</button>
+                </div>
+            </div>
+            <div class="bl-row">
+                <div class="bl-product">Сир</div>
+                <div class="bl-count">
+                    <button class="bl-minus">-</button>
+                    <span class="bl-label">1</span>
+                    <button class="bl-plus">+</button>
+                </div>
+                <div class="bl-buttons">
+                    <button class="bl-bought">Куплено</button>
+                    <button class="bl-del">x</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bl-bought">
-        <div class="bl-title">Залишилося</div>
-        <div class="bl-title">Куплене</div>
+        <div class="right-container">
+            <div class="bl-title"><h3>Залишилося</h3></div>
+            <div class="bl-right-prod-list">
+                <span class="left-label">
+                    <span class="titleProduct">Помідори</span>
+                    <span class="ui-circular-number">1</span>
+                </span>
+                <span class="left-label">
+                    <span class="titleProduct">Печиво</span>
+                    <span class="ui-circular-number">1</span>
+                </span>
+                <span class="left-label">
+                    <span class="titleProduct">Сир</span>
+                    <span class="ui-circular-number">1</span>
+                </span>
+            </div>
+            <div class="bl-title"><h3>Куплено</h3></div>
+            <div class="bl-right-prod-list"></div>
+        </div>
     </div>
 </div>
 
