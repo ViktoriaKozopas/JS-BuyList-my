@@ -29,7 +29,7 @@
     border-radius: 5px;
 }
 
-.right-main-container{
+.right-main-container {
     /*background-color: red;*/
     background-color: #DADADA;
     padding: 10px;
@@ -78,6 +78,29 @@ input[type="text"] {
     font-size: 1rem;
     float: right;
     box-sizing: border-box;
+
+    position: relative;
+}
+
+.button-add::after {
+    content: "Tooltip";
+    attr(data-tooltip);
+    position: absolute;
+
+    top: -35px;
+    left: 50%;
+    width: 100%;
+    border-radius: 5px;
+    margin-left: -65px;
+    padding: 5px;
+    background-color: rgba(10, 1, 64, 0.9);
+    visibility: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.button-add:hover::after{
+    visibility: visible;
+    transform: translateY(-20px) scale(1.2);
 }
 
 .bl-row {
@@ -120,6 +143,29 @@ input[type="text"] {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
+
+    position: relative;
+}
+
+.bl-minus::after {
+    content: "Tooltip";
+    attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 70px;
+    border-radius: 5px;
+    margin-left: -40px;
+    padding: 5px;
+    background-color: rgba(10, 1, 64, 0.9);
+    opacity: 1;
+    visibility: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.bl-minus:hover::after{
+    visibility: visible;
+    transform: translateY(-20px) scale(1.2);
 }
 
 .bl-label {
@@ -146,6 +192,29 @@ input[type="text"] {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
+
+    position: relative;
+}
+
+.bl-plus::after{
+    content: "Tooltip";
+    attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 70px;
+    border-radius: 5px;
+    margin-left: -40px;
+    padding: 5px;
+    background-color: rgba(10, 1, 64, 0.9);
+    opacity: 1;
+    visibility: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.bl-plus:hover::after{
+    visibility: visible;
+    transform: translateY(-20px) scale(1.2);
 }
 
 .bl-buttons {
@@ -161,6 +230,29 @@ input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     font-size: 15px;
+
+    position: relative;
+}
+
+.bl-bought::after{
+    content: "Tooltip";
+    attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 100%;
+    border-radius: 5px;
+    margin-left: -47px;
+    padding: 5px;
+    background-color: rgba(10, 1, 64, 0.9);
+    color:white;
+    visibility: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.bl-bought:hover::after{
+    visibility: visible;
+    transform: translateY(-20px) scale(1.2);
 }
 
 .bl-del {
@@ -172,7 +264,28 @@ input[type="text"] {
     border-radius: 5px;
     font-weight: bold;
     font-size: 15px;
+    position: relative;
+}
 
+.bl-del::after{
+    content: "Tooltip";
+    attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 70px;
+    border-radius: 5px;
+    margin-left: -40px;
+    padding: 5px;
+    background-color: rgba(10, 1, 64, 0.9);
+    color:white;
+    visibility: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.bl-del:hover::after{
+    visibility: visible;
+    transform: translateY(-20px) scale(1.2);
 }
 
 .bl-title {
@@ -216,6 +329,39 @@ input[type="text"] {
     padding: 4px 7px;
 }
 
+.badge {
+    position: fixed;
+    left: 50px;
+    bottom: 0px;
+
+    width: 120px;
+    height: 150px;
+    background-color: rgb(209, 102, 13);
+    color: white;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    margin-bottom: -100px;
+
+    transition: all 2s ease;
+}
+
+.badge:hover {
+    transform: translateY(-100px);
+    background-color: rgba(10, 1, 64, 0.9);
+    border-radius: 20px 20px 0 0;
+}
+
+.title-badge {
+    font-size: 30px;
+    text-align: center;
+}
+
+.author-badge {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
 @media (max-width: 1000px) {
     .left-main-container {
         width: 98%;
@@ -229,15 +375,32 @@ input[type="text"] {
         padding: 0;
     }
 
-    .right-container{
+    .right-container {
         margin: 10px 0 0;
         width: 100%;
         padding: 0;
     }
 }
-*{
+
+@media print {
+    .title-badge {
+        display: none;
+    }
+
+    .badge {
+        border: 3px solid rgba(10, 1, 64, 0.9);
+        background-color: white;
+        border-radius: 20px 20px 0 0;
+        color: black;
+        height: 100px;
+        margin-bottom: 0px;
+    }
+}
+
+* {
     font-family: "Comic Sans MS";
 }
+
 body {
     background-color: #DADADA;
 }
