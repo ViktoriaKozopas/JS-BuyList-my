@@ -8,7 +8,7 @@
     /*background-color: #2185D0;*/
     width: 100%;
     margin: auto;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
 .left-main-container {
@@ -17,6 +17,7 @@
     width: 60%;
     padding: 10px 25px 10px 10px;
     float: left;
+    box-sizing: border-box;
 }
 
 .left-container {
@@ -32,17 +33,20 @@
 .right-main-container {
     /*background-color: red;*/
     background-color: #DADADA;
+    width: 40%;
     padding: 10px;
+    float: left;
+    box-sizing: border-box;
 }
 
 .right-container {
     /*background-color: blueviolet;*/
     background-color: white;
-    display: inline-block;
+    width: 100%;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    margin-left: 10px;
+    display: inline-block;
     border: 1px solid lightgray;
     border-radius: 5px;
 }
@@ -84,7 +88,7 @@ input[type="text"] {
 
 .button-add::after {
     content: "Tooltip";
-    attr(data-tooltip);
+attr(data-tooltip);
     position: absolute;
 
     top: -35px;
@@ -98,7 +102,7 @@ input[type="text"] {
     transition: all 2s ease-in-out;
 }
 
-.button-add:hover::after{
+.button-add:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
 }
@@ -149,7 +153,7 @@ input[type="text"] {
 
 .bl-minus::after {
     content: "Tooltip";
-    attr(data-tooltip);
+attr(data-tooltip);
     position: absolute;
     top: -25px;
     left: 50%;
@@ -163,7 +167,7 @@ input[type="text"] {
     transition: all 2s ease-in-out;
 }
 
-.bl-minus:hover::after{
+.bl-minus:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
 }
@@ -196,9 +200,9 @@ input[type="text"] {
     position: relative;
 }
 
-.bl-plus::after{
+.bl-plus::after {
     content: "Tooltip";
-    attr(data-tooltip);
+attr(data-tooltip);
     position: absolute;
     top: -25px;
     left: 50%;
@@ -212,7 +216,7 @@ input[type="text"] {
     transition: all 2s ease-in-out;
 }
 
-.bl-plus:hover::after{
+.bl-plus:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
 }
@@ -234,9 +238,9 @@ input[type="text"] {
     position: relative;
 }
 
-.bl-bought::after{
+.bl-bought::after {
     content: "Tooltip";
-    attr(data-tooltip);
+attr(data-tooltip);
     position: absolute;
     top: -25px;
     left: 50%;
@@ -245,12 +249,12 @@ input[type="text"] {
     margin-left: -47px;
     padding: 5px;
     background-color: rgba(10, 1, 64, 0.9);
-    color:white;
+    color: white;
     visibility: hidden;
     transition: all 2s ease-in-out;
 }
 
-.bl-bought:hover::after{
+.bl-bought:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
 }
@@ -267,9 +271,9 @@ input[type="text"] {
     position: relative;
 }
 
-.bl-del::after{
+.bl-del::after {
     content: "Tooltip";
-    attr(data-tooltip);
+attr(data-tooltip);
     position: absolute;
     top: -25px;
     left: 50%;
@@ -278,12 +282,12 @@ input[type="text"] {
     margin-left: -40px;
     padding: 5px;
     background-color: rgba(10, 1, 64, 0.9);
-    color:white;
+    color: white;
     visibility: hidden;
     transition: all 2s ease-in-out;
 }
 
-.bl-del:hover::after{
+.bl-del:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
 }
@@ -295,22 +299,24 @@ input[type="text"] {
     /*padding: 3px;*/
     margin: auto;
     text-align: left;
+    font-size: 15px;
 }
 
 .bl-right-prod-list {
     background-color: white;
     border-bottom: solid 1px darkgrey;
-    padding: 15px 5px;
+    padding: 9px 5px;
     text-align: left;
 }
 
-.left-label {
+.bought-product-in-right-col {
     background-color: #DADADA;
     display: inline-block;
     border: 0 solid transparent;
     border-radius: 5px;
     text-align: center;
     padding: 4px 7px;
+    margin: 5px;
 }
 
 .titleProduct {
@@ -336,7 +342,7 @@ input[type="text"] {
 
     width: 120px;
     height: 150px;
-    background-color: rgb(209, 102, 13);
+    background-color: blueviolet;
     color: white;
     border-radius: 5px 5px 0 0;
     padding: 5px;
@@ -362,12 +368,11 @@ input[type="text"] {
     margin-top: 15px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .left-main-container {
         width: 98%;
         padding: 0;
         float: none;
-
     }
 
     .right-main-container {
@@ -377,8 +382,7 @@ input[type="text"] {
 
     .right-container {
         margin: 10px 0 0;
-        width: 100%;
-        padding: 0;
+        width: 98%;
     }
 }
 
