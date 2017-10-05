@@ -70,12 +70,26 @@ $(function () {
             $node.find(".edit-name").val(title);
         });
 
-        $node.find(".bl-product-name").focusout(function () {
+        $node.find(".edit-name").focusout(function () {
             $node.find(".bl-product-name").show();
             $node.find(".edit-name").hide();
             title = $node.find(".edit-name").val();
-            $node.find(".bl-product-name").text(title);
+            if(title.trim()){
+                $node.find(".bl-product-name").text(title);
+                $right_node.find(".titleProduct").text(title);
+            }
+        });
 
+        $node.find(".edit-name").keyup(function (e) {
+            if (e.which == 13) {
+                $node.find(".bl-product-name").show();
+                $node.find(".edit-name").hide();
+                title = $node.find(".edit-name").val();
+                if(title.trim()){
+                    $node.find(".bl-product-name").text(title);
+                    $right_node.find(".titleProduct").text(title);
+                }
+            }
         });
 
         LIST.append($node);
