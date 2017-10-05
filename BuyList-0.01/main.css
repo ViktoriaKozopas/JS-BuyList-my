@@ -366,14 +366,14 @@ attr(data-tooltip);
     font-size: 15px;
 }
 
-.bl-right-prod-list-bought {
+.bl-right-prod-list-left {
     background-color: white;
     border-bottom: solid 1px darkgrey;
     padding: 9px 5px;
     text-align: left;
 }
 
-.bl-right-prod-list-unbought {
+.bl-right-prod-list-bought {
     background-color: white;
     border-bottom: solid 1px darkgrey;
     padding: 9px 5px;
