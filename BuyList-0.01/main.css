@@ -61,7 +61,7 @@
     border-bottom: 1px solid darkgrey;
 }
 
-input[type="text"] {
+.input-text{
     height: 35px;
     width: 80%;
     padding: 3px;
@@ -70,6 +70,7 @@ input[type="text"] {
     opacity: 0.6;
     box-sizing: border-box;
 }
+
 
 .button-add {
     height: 35px;
@@ -87,7 +88,7 @@ input[type="text"] {
 }
 
 .button-add::after {
-    content: "Tooltip";
+    content: "Add product";
 attr(data-tooltip);
     position: absolute;
 
@@ -132,6 +133,15 @@ attr(data-tooltip);
     padding-top: 10px;
 }
 
+.edit-name{
+    width: 25%;
+    margin: auto;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    display: none;
+}
+
 .bl-count {
     display: inline-block;
     width: 36%;
@@ -159,7 +169,7 @@ attr(data-tooltip);
 }
 
 .bl-minus::after {
-    content: "Tooltip";
+    content: "Minus";
 attr(data-tooltip);
     position: absolute;
     top: -25px;
@@ -204,7 +214,6 @@ attr(data-tooltip);
     width: 30px;
     display: inline-block;
     background: #15d01f;
-    opacity: 0.7;
     color: white;
     border: 0 solid transparent;
     border-radius: 50%;
@@ -216,7 +225,7 @@ attr(data-tooltip);
 }
 
 .bl-plus::after {
-    content: "Tooltip";
+    content: "Plus";
 attr(data-tooltip);
     position: absolute;
     top: -25px;
@@ -257,12 +266,11 @@ attr(data-tooltip);
     padding: 10px;
     border-radius: 5px;
     font-size: 15px;
-
     position: relative;
 }
 
 .bl-bought::after {
-    content: "Tooltip";
+    content: "Bought";
 attr(data-tooltip);
     position: absolute;
     top: -25px;
@@ -290,6 +298,23 @@ attr(data-tooltip);
     background-color: #c6c5be;
 }
 
+/*НЕ АБОТАЕТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.bl-row .bl-unbought {
+    display: none;
+}
+/*!*НЕ АБОТАЕТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*!*/
+.bl-row.is-bought button {
+    display: none;
+}
+/*!*НЕ АБОТАЕТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*!*/
+.bl-row.is-bought .bl-unbought {
+    display: inline;
+}
+/*!*НЕ АБОТАЕТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*!*/
+.bl-row.is-bought .bl-product-name{
+    text-decoration: line-through;
+}
+
 .bl-del {
     height: 43px;
     width: 43px;
@@ -303,7 +328,7 @@ attr(data-tooltip);
 }
 
 .bl-del::after {
-    content: "Tooltip";
+    content: "Delete";
 attr(data-tooltip);
     position: absolute;
     top: -25px;
@@ -341,7 +366,14 @@ attr(data-tooltip);
     font-size: 15px;
 }
 
-.bl-right-prod-list {
+.bl-right-prod-list-bought {
+    background-color: white;
+    border-bottom: solid 1px darkgrey;
+    padding: 9px 5px;
+    text-align: left;
+}
+
+.bl-right-prod-list-unbought {
     background-color: white;
     border-bottom: solid 1px darkgrey;
     padding: 9px 5px;

@@ -13,7 +13,7 @@
         <div class=left-main-container>
             <div class="left-container">
                 <div class="new-product">
-                    <input class = "input-text" type="text" placeholder="Назва товару">
+                    <input class="input-text" type="text" placeholder="Назва товару">
                     <button class="button-add" data-tooltip="">Додати</button>
                 </div>
                 <div class="list-of-products"></div>
@@ -22,22 +22,22 @@
         <div class=right-main-container>
             <div class="right-container">
                 <div class="bl-title"><h3>Залишилося</h3></div>
-                <div class="bl-right-prod-list">
-                <span class="bought-product-in-right-col">
-                    <span class="titleProduct">Помідори</span>
-                    <span class="ui-circular-number">1</span>
-                </span>
-                    <span class="bought-product-in-right-col">
-                    <span class="titleProduct">Печиво</span>
-                    <span class="ui-circular-number">1</span>
-                </span>
-                    <span class="bought-product-in-right-col">
-                    <span class="titleProduct">Сир</span>
-                    <span class="ui-circular-number">1</span>
-                </span>
+                <div class="bl-right-prod-list-bought">
+                <!--<span class="bought-product-in-right-col">-->
+                    <!--<span class="titleProduct">Помідори</span>-->
+                    <!--<span class="ui-circular-number">1</span>-->
+                <!--</span>-->
+                    <!--<span class="bought-product-in-right-col">-->
+                    <!--<span class="titleProduct">Печиво</span>-->
+                    <!--<span class="ui-circular-number">1</span>-->
+                <!--</span>-->
+                    <!--<span class="bought-product-in-right-col">-->
+                    <!--<span class="titleProduct">Сир</span>-->
+                    <!--<span class="ui-circular-number">1</span>-->
+                <!--</span>-->
                 </div>
                 <div class="bl-title"><h3>Куплено</h3></div>
-                <div class="bl-right-prod-list"></div>
+                <div class="bl-right-prod-list-unbought"></div>
             </div>
         </div>
     </div>
@@ -45,6 +45,7 @@
     <div class="one-row-template" style="display: none;">
         <div class="bl-row">
             <div class="bl-product-name">Сир</div>
+            <input class="edit-name" type="text">
             <div class="bl-count">
                 <button class="bl-minus">-</button>
                 <span class="bl-quantity-label">1</span>
@@ -52,11 +53,17 @@
             </div>
             <div class="bl-buttons">
                 <button class="bl-bought">Куплено</button>
-                <!--<button class="bl-bought">Не куплено</button>-->
+                <button class="bl-unbought">Не куплено</button>
                 <button class="bl-del">x</button>
             </div>
         </div>
     </div>
+    <span class="one-product-template" style="display: none">
+        <span class="bought-product-in-right-col">
+                    <span class="titleProduct">Помідори</span>
+                    <span class="ui-circular-number">1</span>
+                </span>
+    </span>
 </div>
 <div class="badge">
     <div class="title-badge">BuyList</div>
