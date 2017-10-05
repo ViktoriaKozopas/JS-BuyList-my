@@ -16,42 +16,45 @@
                     <input type="text" value="Назва товару">
                     <button class="button-add" data-tooltip="">Додати</button>
                 </div>
-                <div class="bl-row">
-                    <div class="bl-product">Помідори</div>
-                    <div class="bl-count">
-                        <button class="bl-minus" data-tooltip="">-</button>
-                        <span class="bl-label">1</span>
-                        <button class="bl-plus" data-tooltip="">+</button>
+                <div class="list-of-products">
+                    <div class="bl-row">
+                        <div class="bl-product-name">Помідори</div>
+                        <div class="bl-count">
+                            <button class="bl-minus" data-tooltip="">-</button>
+                            <span class="bl-quantity-label">1</span>
+                            <button class="bl-plus" data-tooltip="">+</button>
+                        </div>
+                        <div class="bl-buttons">
+                            <button class="bl-bought" data-tooltip="">Куплено</button>
+                            <button class="bl-del" data-tooltip="">x</button>
+                        </div>
                     </div>
-                    <div class="bl-buttons">
-                        <button class="bl-bought" data-tooltip="">Куплено</button>
-                        <button class="bl-del" data-tooltip="">x</button>
+                    <div class="bl-row">
+                        <div class="bl-product-name">Печиво</div>
+                        <div class="bl-count">
+                            <button class="bl-minus">-</button>
+                            <span class="bl-quantity-label">1</span>
+                            <button class="bl-plus">+</button>
+                        </div>
+                        <div class="bl-buttons">
+                            <button class="bl-bought">Куплено</button>
+                            <button class="bl-del">x</button>
+                        </div>
+                    </div>
+                    <div class="bl-row">
+                        <div class="bl-product-name">Сир</div>
+                        <div class="bl-count">
+                            <button class="bl-minus">-</button>
+                            <span class="bl-quantity-label">1</span>
+                            <button class="bl-plus">+</button>
+                        </div>
+                        <div class="bl-buttons">
+                            <button class="bl-bought">Куплено</button>
+                            <button class="bl-del">x</button>
+                        </div>
                     </div>
                 </div>
-                <div class="bl-row">
-                    <div class="bl-product">Печиво</div>
-                    <div class="bl-count">
-                        <button class="bl-minus">-</button>
-                        <span class="bl-label">1</span>
-                        <button class="bl-plus">+</button>
-                    </div>
-                    <div class="bl-buttons">
-                        <button class="bl-bought">Куплено</button>
-                        <button class="bl-del">x</button>
-                    </div>
-                </div>
-                <div class="bl-row">
-                    <div class="bl-product">Сир</div>
-                    <div class="bl-count">
-                        <button class="bl-minus">-</button>
-                        <span class="bl-label">1</span>
-                        <button class="bl-plus">+</button>
-                    </div>
-                    <div class="bl-buttons">
-                        <button class="bl-bought">Куплено</button>
-                        <button class="bl-del">x</button>
-                    </div>
-                </div>
+
             </div>
         </div>
         <div class=right-main-container>
@@ -76,12 +79,30 @@
             </div>
         </div>
     </div>
+
+    <div class = "one-row-template" style="display: none;">
+        <div class="bl-row">
+            <div class="bl-product-name">Сир</div>
+            <div class="bl-count">
+                <button class="bl-minus">-</button>
+                <span class="bl-quantity-label">1</span>
+                <button class="bl-plus">+</button>
+            </div>
+            <div class="bl-buttons">
+                <button class="bl-bought">Куплено</button>
+                <button class="bl-del">x</button>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="badge">
     <div class="title-badge">BuyList</div>
     <div class="author-badge">Created by: Viktoria Kozopas :D</div>
 
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>

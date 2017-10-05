@@ -111,12 +111,11 @@ attr(data-tooltip);
     width: auto;
     background-color: white;
     border-bottom: 1px solid darkgrey;
-
     height: 40px;
     padding: 10px;
 }
 
-.bl-product {
+.bl-product-name {
     display: inline-block;
     width: 25%;
     margin: auto;
@@ -172,7 +171,7 @@ attr(data-tooltip);
     transform: translateY(-20px) scale(1.2);
 }
 
-.bl-label {
+.bl-quantity-label {
     height: 30px;
     width: 30px;
     display: inline-block;
@@ -368,7 +367,7 @@ attr(data-tooltip);
     margin-top: 15px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px /*500px*/) {
     .left-main-container {
         width: 98%;
         padding: 0;
