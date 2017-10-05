@@ -107,6 +107,14 @@ attr(data-tooltip);
     transform: translateY(-20px) scale(1.2);
 }
 
+.button-add:focus {
+    outline: none;
+}
+
+.button-add:active {
+    background-color: #2166b1;
+}
+
 .bl-row {
     width: auto;
     background-color: white;
@@ -138,7 +146,7 @@ attr(data-tooltip);
     height: 30px;
     width: 30px;
     display: inline-block;
-    background: #ff6357;
+    background: #ff342a;
     opacity: 0.7;
     color: white;
     border: 0 solid transparent;
@@ -171,6 +179,14 @@ attr(data-tooltip);
     transform: translateY(-20px) scale(1.2);
 }
 
+.bl-minus:focus {
+    outline: none;
+}
+
+.bl-minus:active {
+    background-color: #b62f26;
+}
+
 .bl-quantity-label {
     height: 30px;
     width: 30px;
@@ -187,7 +203,7 @@ attr(data-tooltip);
     height: 30px;
     width: 30px;
     display: inline-block;
-    background: #34d035;
+    background: #15d01f;
     opacity: 0.7;
     color: white;
     border: 0 solid transparent;
@@ -218,6 +234,14 @@ attr(data-tooltip);
 .bl-plus:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
+}
+
+.bl-plus:focus {
+    outline: none;
+}
+
+.bl-plus:active {
+    background-color: #13951c;
 }
 
 .bl-buttons {
@@ -258,6 +282,14 @@ attr(data-tooltip);
     transform: translateY(-20px) scale(1.2);
 }
 
+.bl-bought:focus {
+    outline: none;
+}
+
+.bl-bought:active {
+    background-color: #c6c5be;
+}
+
 .bl-del {
     height: 43px;
     width: 43px;
@@ -289,6 +321,14 @@ attr(data-tooltip);
 .bl-del:hover::after {
     visibility: visible;
     transform: translateY(-20px) scale(1.2);
+}
+
+.bl-del:focus {
+    outline: none;
+}
+
+.bl-del:active {
+    background-color: #b95448;
 }
 
 .bl-title {
@@ -367,7 +407,8 @@ attr(data-tooltip);
     margin-top: 15px;
 }
 
-@media (max-width: 900px /*500px*/) {
+@media (max-width: 900px /*500px*/
+) {
     .left-main-container {
         width: 98%;
         padding: 0;
