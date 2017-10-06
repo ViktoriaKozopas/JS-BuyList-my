@@ -20,6 +20,14 @@ $(function () {
         var $orange_quantity = $right_node.find(".ui-circular-number");
         $orange_quantity.text(quantity);
 
+        var $bought_node = $(BOUGHT_ITEM_TEMPLATE);
+        $bought_node.find(".titleProduct").text(title);
+        $bought_node.find(".titleProduct").css('textDecoration', 'line-through');
+        var $bought_quantity = $bought_node.find(".ui-circular-number");
+        $bought_quantity.css('textDecoration', 'line-through');
+        $bought_quantity.text(quantity);
+        $bought_node.hide();
+
         //when start
         $node.find(".bl-minus").css('opacity', '0.6');
         $node.find(".bl-minus").prop("disabled", true);
@@ -28,10 +36,15 @@ $(function () {
 
         $node.find(".bl-minus").click(function () {
             if (quantity > 1) {
+                if (quantity == 2) {
+                    $node.find(".bl-minus").prop("disabled", true);
+                    $node.find(".bl-minus").css('opacity', '0.6');
+                }
                 quantity -= 1;
                 $quantity_label.text(quantity);
                 $orange_quantity.text(quantity);
-            }else if (quantity == 1){
+                $bought_quantity.text(quantity);
+            } else if (quantity == 1) {
                 $node.find(".bl-minus").prop("disabled", true);
                 $node.find(".bl-minus").css('opacity', '0.6');
             }
@@ -43,38 +56,40 @@ $(function () {
             quantity += 1;
             $quantity_label.text(quantity);
             $orange_quantity.text(quantity);
+            $bought_quantity.text(quantity);
         });
 
         $node.find(".bl-del").click(function () {
             $node.remove();
+            $right_node.remove();
+            $bought_node.remove();
         });
 
-        //Bought product НЕ АБОТАЕТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         $node.find(".bl-bought").click(function () {
-            // $node.remove();
-            alert("sth");
-            $node.addClass(".is-bought");
+            $node.addClass("is-bought");
+            $right_node.hide();
+            $bought_node.show();
         });
 
-        //unboought product
-        //НЕ АБОТАЕТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         $node.find(".bl-unbought").click(function () {
             $node.removeClass("is-bought");
+            $right_node.show();
+            $bought_node.hide();
         });
 
 
-        //і тут НЕ АБОТАЕТ - редагує але не повертається попередня форма
         $node.find(".bl-product-name").click(function () {
             $node.find(".bl-product-name").hide();
             $node.find(".edit-name").show();
             $node.find(".edit-name").val(title);
+            $node.find(".edit-name").focus();
         });
 
         $node.find(".edit-name").focusout(function () {
             $node.find(".bl-product-name").show();
             $node.find(".edit-name").hide();
             title = $node.find(".edit-name").val();
-            if(title.trim()){
+            if (title.trim()) {
                 $node.find(".bl-product-name").text(title);
                 $right_node.find(".titleProduct").text(title);
             }
@@ -85,7 +100,7 @@ $(function () {
                 $node.find(".bl-product-name").show();
                 $node.find(".edit-name").hide();
                 title = $node.find(".edit-name").val();
-                if(title.trim()){
+                if (title.trim()) {
                     $node.find(".bl-product-name").text(title);
                     $right_node.find(".titleProduct").text(title);
                 }
@@ -94,6 +109,7 @@ $(function () {
 
         LIST.append($node);
         LEFT_LIST_LEFT.append($right_node);
+        BOUGHT_LIST_LEFT.append($bought_node);
     }
 
     addItem("Помідори");
