@@ -24,7 +24,8 @@ $(function () {
         $bought_node.find(".titleProduct").text(title);
         $bought_node.find(".titleProduct").css('textDecoration', 'line-through');
         var $bought_quantity = $bought_node.find(".ui-circular-number");
-        $bought_quantity.css('textDecoration', 'line-through');
+        //it's not beautiful
+        //$bought_quantity.css('textDecoration', 'line-through');
         $bought_quantity.text(quantity);
         $bought_node.hide();
 
@@ -90,8 +91,14 @@ $(function () {
             $node.find(".edit-name").hide();
             title = $node.find(".edit-name").val();
             if (title.trim()) {
-                $node.find(".bl-product-name").text(title);
-                $right_node.find(".titleProduct").text(title);
+                if (title.length > 15) {
+                    alert("Product name should be less than 15 symbols. \n" +
+                        "Actual length is " + title.length + ". TU");
+                    $node.find(".edit-name").focus();
+                } else {
+                    $node.find(".bl-product-name").text(title);
+                    $right_node.find(".titleProduct").text(title);
+                }
             }
         });
 
@@ -101,8 +108,12 @@ $(function () {
                 $node.find(".edit-name").hide();
                 title = $node.find(".edit-name").val();
                 if (title.trim()) {
-                    $node.find(".bl-product-name").text(title);
-                    $right_node.find(".titleProduct").text(title);
+                    if (title.length > 15) {
+                        $node.find(".edit-name").focus();
+                    } else {
+                        $node.find(".bl-product-name").text(title);
+                        $right_node.find(".titleProduct").text(title);
+                    }
                 }
             }
         });
@@ -121,9 +132,15 @@ $(function () {
     $(".button-add").click(function () {
         var new_name = $new_input.val();
         if (new_name.trim()) {
-            addItem(new_name);
-            $new_input.val("");
-            $new_input.focus();
+            if (new_name.length > 15) {
+                alert("Product name should be less than 15 symbols. \n" +
+                    "Actual length is " + new_name.length + ". TU");
+                $new_input.focus();
+            } else {
+                addItem(new_name);
+                $new_input.val("");
+                $new_input.focus();
+            }
         }
     });
     //add new product enter pressed
@@ -131,9 +148,15 @@ $(function () {
         if (e.which == 13) {
             var new_name = $new_input.val();
             if (new_name.trim()) {
-                addItem(new_name);
-                $new_input.val("");
-                $new_input.focus();
+                if (new_name.length > 15) {
+                    alert("Product name should be less than 15 symbols. \n" +
+                        "Actual length is " + new_name.length + ". TU");
+                    $new_input.focus();
+                } else {
+                    addItem(new_name);
+                    $new_input.val("");
+                    $new_input.focus();
+                }
             }
         }
     });
