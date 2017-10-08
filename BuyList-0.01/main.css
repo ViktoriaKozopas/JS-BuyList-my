@@ -61,7 +61,7 @@
     border-bottom: 1px solid darkgrey;
 }
 
-.input-text{
+.input-text {
     height: 35px;
     width: 80%;
     padding: 3px;
@@ -70,7 +70,6 @@
     opacity: 0.6;
     box-sizing: border-box;
 }
-
 
 .button-add {
     height: 35px;
@@ -98,14 +97,15 @@ attr(data-tooltip);
     border-radius: 5px;
     margin-left: -50%;
     padding: 5px;
-    background-color: rgba(10, 1, 64, 0.9);
+    background-color: rgba(15, 1, 177, 0.58);
     visibility: hidden;
     transition: all 1s ease-in-out;
 }
 
 .button-add:hover::after {
     visibility: visible;
-    transform: translateY(-20px) scale(1.2);
+    background-color: rgba(10, 1, 64, 0.9);
+    transform: translateY(-5px) scale(1.17);
 }
 
 .button-add:focus {
@@ -133,7 +133,7 @@ attr(data-tooltip);
     padding-top: 10px;
 }
 
-.edit-name{
+.edit-name {
     width: 25%;
     margin: auto;
     float: left;
@@ -172,20 +172,21 @@ attr(data-tooltip);
     content: "Minus";
 attr(data-tooltip);
     position: absolute;
-    top: -25px;
+    top: -30px;
     left: 50%;
-    width: 70px;
+    width: 60px;
     border-radius: 5px;
-    margin-left: -40px;
+    margin-left: -35px;
     padding: 5px;
-    background-color: rgba(10, 1, 64, 1);
+    background-color: rgba(15, 1, 177, 0.58);
     visibility: hidden;
     transition: all 1s ease-in-out;
 }
 
 .bl-minus:hover::after {
     visibility: visible;
-    transform: translateY(-20px) scale(1.2);
+    background-color: rgba(10, 1, 64, 1);
+    transform: translateY(-5px) scale(1.17);
 }
 
 .bl-minus:focus {
@@ -227,13 +228,13 @@ attr(data-tooltip);
     content: "Plus";
 attr(data-tooltip);
     position: absolute;
-    top: -25px;
+    top: -30px;
     left: 50%;
-    width: 70px;
+    width: 60px;
     border-radius: 5px;
-    margin-left: -40px;
+    margin-left: -35px;
     padding: 5px;
-    background-color: rgba(10, 1, 64, 0.9);
+    background-color: rgba(15, 1, 177, 0.58);
     opacity: 1;
     visibility: hidden;
     transition: all 1s ease-in-out;
@@ -241,7 +242,8 @@ attr(data-tooltip);
 
 .bl-plus:hover::after {
     visibility: visible;
-    transform: translateY(-20px) scale(1.2);
+    background-color: rgba(10, 1, 64, 0.9);
+    transform: translateY(-5px) scale(1.17);
 }
 
 .bl-plus:focus {
@@ -272,13 +274,13 @@ attr(data-tooltip);
     content: "Bought";
 attr(data-tooltip);
     position: absolute;
-    top: -25px;
+    top: -35px;
     left: 50%;
     width: 100%;
     border-radius: 5px;
     margin-left: -47px;
     padding: 5px;
-    background-color: rgba(10, 1, 64, 0.9);
+    background-color: rgba(15, 1, 177, 0.58);
     color: white;
     visibility: hidden;
     transition: all 1s ease-in-out;
@@ -286,7 +288,8 @@ attr(data-tooltip);
 
 .bl-bought:hover::after {
     visibility: visible;
-    transform: translateY(-20px) scale(1.2);
+    background-color: rgba(10, 1, 64, 0.9);
+    transform: translateY(-5px) scale(1.17);
 }
 
 .bl-bought:focus {
@@ -313,7 +316,7 @@ attr(data-tooltip);
     display: inline;
 }
 
-.bl-row.is-bought .bl-product-name{
+.bl-row.is-bought .bl-product-name {
     text-decoration: line-through;
 }
 
@@ -333,13 +336,13 @@ attr(data-tooltip);
     content: "Delete";
 attr(data-tooltip);
     position: absolute;
-    top: -25px;
+    top: -30px;
     left: 50%;
-    width: 70px;
+    width: 60px;
     border-radius: 5px;
-    margin-left: -40px;
+    margin-left: -35px;
     padding: 5px;
-    background-color: rgba(10, 1, 64, 0.9);
+    background-color: rgba(15, 1, 177, 0.58);
     color: white;
     visibility: hidden;
     transition: all 1s ease-in-out;
@@ -347,7 +350,8 @@ attr(data-tooltip);
 
 .bl-del:hover::after {
     visibility: visible;
-    transform: translateY(-20px) scale(1.2);
+    background-color: rgba(10, 1, 64, 0.9);
+    transform: translateY(-5px) scale(1.17);
 }
 
 .bl-del:focus {
